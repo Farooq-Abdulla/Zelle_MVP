@@ -1,0 +1,24 @@
+services:
+  zelle_frontend:
+    build:
+      dockerfile: ./frontend/Dockerfile
+    ports:
+      - 5173:5173
+    # volumes:
+    #   - ./frontend:/app
+    # networks:
+    #   - zelle-nw
+  zelle_backend:
+    build:
+      dockerfile: ./backend/Dockerfile
+    ports:
+      - 3000:3000
+    # env_file:
+    #   - ./backend/.env
+    # networks:
+    #   - zelle-nw
+    # volumes:
+    #   - ./backend:/app
+# networks:
+#   zelle-nw:
+#     driver: bridge

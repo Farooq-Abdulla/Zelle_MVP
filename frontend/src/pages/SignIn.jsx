@@ -42,7 +42,7 @@ export default function SignIn() {
                     {
                       username,
                       password,
-                    }
+                    },
                   );
                   localStorage.setItem("token", res.data.token);
                   navigate("/dashboard");
